@@ -1,0 +1,80 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A_SIG	qhsmtst.h	/^    A_SIG = Q_USER_SIG,$/;"	e	enum:QHsmTstSignals
+BIN_DIR	Makefile	/^BIN_DIR := build$/;"	m
+BIN_DIR	Makefile	/^BIN_DIR := build_rel$/;"	m
+BIN_DIR	Makefile	/^BIN_DIR := build_spy$/;"	m
+BSP_display	main.c	/^void BSP_display(char const *msg) {$/;"	f
+BSP_exit	main.c	/^void BSP_exit(void) {$/;"	f
+B_SIG	qhsmtst.h	/^    B_SIG,$/;"	e	enum:QHsmTstSignals
+CC	Makefile	/^CC    := gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -c -O3 -fno-pie -std=c11 -pedantic -Wall -Wextra -W \\$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -c -g -O -fno-pie -std=c11 -pedantic -Wall -Wextra -W \\$/;"	m
+CONF	Makefile	/^	CONF := dbg$/;"	m
+CPP	Makefile	/^CPP   := g++$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = -c -O3 -fno-pie -std=c++11 -pedantic -Wall -Wextra \\$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = -c -g -O -fno-pie -std=c++11 -pedantic -Wall -Wextra \\$/;"	m
+CPP_DEPS_EXT	Makefile	/^CPP_DEPS_EXT := $(patsubst %.o,%.d, $(CPP_OBJS_EXT))$/;"	m
+CPP_OBJS	Makefile	/^CPP_OBJS     := $(patsubst %.cpp,%.o, $(CPP_SRCS))$/;"	m
+CPP_OBJS_EXT	Makefile	/^CPP_OBJS_EXT := $(addprefix $(BIN_DIR)\/, $(CPP_OBJS))$/;"	m
+CPP_SRCS	Makefile	/^CPP_SRCS :=$/;"	m
+C_DEPS_EXT	Makefile	/^C_DEPS_EXT   := $(patsubst %.o,%.d, $(C_OBJS_EXT))$/;"	m
+C_OBJS	Makefile	/^C_OBJS       := $(patsubst %.c,%.o,   $(C_SRCS))$/;"	m
+C_OBJS_EXT	Makefile	/^C_OBJS_EXT   := $(addprefix $(BIN_DIR)\/, $(C_OBJS))$/;"	m
+C_SIG	qhsmtst.h	/^    C_SIG,$/;"	e	enum:QHsmTstSignals
+C_SRCS	Makefile	/^C_SRCS := \\$/;"	m
+DEFINES	Makefile	/^DEFINES   := -DQP_API_VERSION=9999$/;"	m
+D_SIG	qhsmtst.h	/^    D_SIG,$/;"	e	enum:QHsmTstSignals
+E_SIG	qhsmtst.h	/^    E_SIG,$/;"	e	enum:QHsmTstSignals
+F_SIG	qhsmtst.h	/^    F_SIG,$/;"	e	enum:QHsmTstSignals
+G_SIG	qhsmtst.h	/^    G_SIG,$/;"	e	enum:QHsmTstSignals
+H_SIG	qhsmtst.h	/^    H_SIG,$/;"	e	enum:QHsmTstSignals
+IGNORE_SIG	qhsmtst.h	/^    IGNORE_SIG,$/;"	e	enum:QHsmTstSignals
+INCLUDES	Makefile	/^INCLUDES := -I. \\$/;"	m
+I_SIG	qhsmtst.h	/^    I_SIG,$/;"	e	enum:QHsmTstSignals
+LIBS	Makefile	/^LIBS      :=$/;"	m
+LIB_DIRS	Makefile	/^LIB_DIRS  :=$/;"	m
+LINK	Makefile	/^LINK  := gcc    # for C programs$/;"	m
+LINKFLAGS	Makefile	/^	LINKFLAGS := -no-pie$/;"	m
+MAX_SIG	qhsmtst.h	/^    MAX_SIG$/;"	e	enum:QHsmTstSignals
+MKDIR	Makefile	/^	MKDIR      := mkdir -p$/;"	m
+MKDIR	Makefile	/^	MKDIR      := mkdir$/;"	m
+PROJECT	Makefile	/^PROJECT := qhsmtst$/;"	m
+QF_onCleanup	main.c	/^void QF_onCleanup(void) {$/;"	f
+QF_onClockTick	main.c	/^void QF_onClockTick(void) {$/;"	f
+QF_onStartup	main.c	/^void QF_onStartup(void) {$/;"	f
+QHSMTST_H	qhsmtst.h	20;"	d
+QHsmTst	qhsmtst.c	/^} QHsmTst;$/;"	t	typeref:struct:__anon1	file:
+QHsmTstSignals	qhsmtst.h	/^enum QHsmTstSignals {$/;"	g
+QHsmTst_ctor	qhsmtst.c	/^void QHsmTst_ctor(void) {$/;"	f
+QHsmTst_initial	qhsmtst.c	/^static QState QHsmTst_initial(QHsmTst * const me, void const * const par) {$/;"	f	file:
+QHsmTst_s	qhsmtst.c	/^static QState QHsmTst_s(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QHsmTst_s1	qhsmtst.c	/^static QState QHsmTst_s1(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QHsmTst_s11	qhsmtst.c	/^static QState QHsmTst_s11(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QHsmTst_s2	qhsmtst.c	/^static QState QHsmTst_s2(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QHsmTst_s21	qhsmtst.c	/^static QState QHsmTst_s21(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QHsmTst_s211	qhsmtst.c	/^static QState QHsmTst_s211(QHsmTst * const me, QEvt const * const e) {$/;"	f	file:
+QPC	Makefile	/^QPC := ..\/..\/..$/;"	m
+QP_PORT_DIR	Makefile	/^QP_PORT_DIR := $(QPC)\/ports\/posix-qv$/;"	m
+QP_PORT_DIR	Makefile	/^QP_PORT_DIR := $(QPC)\/ports\/win32-qv$/;"	m
+QS_SRCS	Makefile	/^QS_SRCS := \\$/;"	m
+QS_onCommand	main.c	/^void QS_onCommand(uint8_t cmdId,$/;"	f
+Q_onAssert	main.c	/^Q_NORETURN Q_onAssert(char_t const * const module, int_t const loc) {$/;"	f
+RM	Makefile	/^	RM         := rm -f$/;"	m
+RM	Makefile	/^	RM         := rm$/;"	m
+TARGET_EXE	Makefile	/^TARGET_EXE   := $(BIN_DIR)\/$(PROJECT)$(TARGET_EXT)$/;"	m
+TARGET_EXT	Makefile	/^	TARGET_EXT := .exe$/;"	m
+TARGET_EXT	Makefile	/^	TARGET_EXT :=$/;"	m
+TERMINATE_SIG	qhsmtst.h	/^    TERMINATE_SIG,$/;"	e	enum:QHsmTstSignals
+VPATH	Makefile	/^VPATH := . \\$/;"	m
+dispatch	main.c	/^static void dispatch(QSignal sig) {$/;"	f	file:
+foo	qhsmtst.c	/^    uint8_t foo;$/;"	m	struct:__anon1	file:
+l_hsmtst	qhsmtst.c	/^static QHsmTst l_hsmtst; \/* the only instance of the QHsmTst class *\/$/;"	v	file:
+l_outFile	main.c	/^static FILE *l_outFile = (FILE *)0;$/;"	v	file:
+main	main.c	/^int main(int argc, char *argv[]) {$/;"	f
+super	qhsmtst.c	/^    QHsm super;$/;"	m	struct:__anon1	file:
+the_sm	qhsmtst.c	/^QHsm * const the_sm = &l_hsmtst.super;  \/* the opaque pointer *\/$/;"	v

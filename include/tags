@@ -1,0 +1,686 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AO_OBJ	qs.h	/^    AO_OBJ,    \/*!< active object *\/$/;"	e	enum:QSpyObjKind
+AP_OBJ	qs.h	/^    AP_OBJ,    \/*!< generic Application-specific object *\/$/;"	e	enum:QSpyObjKind
+EQ_OBJ	qs.h	/^    EQ_OBJ,    \/*!< raw queue object *\/$/;"	e	enum:QSpyObjKind
+EXPECT	quit.h	43;"	d
+MAX_OBJ	qs.h	/^    MAX_OBJ$/;"	e	enum:QSpyObjKind
+MP_OBJ	qs.h	/^    MP_OBJ,    \/*!< event pool object *\/$/;"	e	enum:QSpyObjKind
+OSpyObjCombnation	qs.h	/^enum OSpyObjCombnation {$/;"	g
+QACTIVE_EQUEUE_SIGNAL_	qk.h	179;"	d
+QACTIVE_EQUEUE_SIGNAL_	qv.h	91;"	d
+QACTIVE_EQUEUE_SIGNAL_	qxk.h	187;"	d
+QACTIVE_EQUEUE_WAIT_	qk.h	176;"	d
+QACTIVE_EQUEUE_WAIT_	qv.h	88;"	d
+QACTIVE_EQUEUE_WAIT_	qxk.h	184;"	d
+QACTIVE_POST	qf.h	251;"	d
+QACTIVE_POST	qf.h	296;"	d
+QACTIVE_POST_LIFO	qf.h	314;"	d
+QACTIVE_POST_X	qf.h	291;"	d
+QACTIVE_POST_X	qf.h	300;"	d
+QACTIVE_START	qf.h	216;"	d
+QASSERT_H	qassert.h	40;"	d
+QActionHandler	qep.h	/^typedef QState (*QActionHandler)(void * const me);$/;"	t
+QActive	qf.h	/^typedef struct QActive {$/;"	s
+QActive	qf.h	/^} QActive;$/;"	t	typeref:struct:QActive
+QActiveDummy	qs.h	/^    } QActiveDummy;$/;"	t	typeref:struct:__anon16
+QActiveVtable	qf.h	/^} QActiveVtable;$/;"	t	typeref:struct:__anon6
+QEP_H	qep.h	41;"	d
+QEQUEUE_H	qequeue.h	41;"	d
+QEQueue	qequeue.h	/^typedef struct QEQueue {$/;"	s
+QEQueue	qequeue.h	/^} QEQueue;$/;"	t	typeref:struct:QEQueue
+QEQueueCtr	qequeue.h	/^    typedef uint16_t QEQueueCtr;$/;"	t
+QEQueueCtr	qequeue.h	/^    typedef uint32_t QEQueueCtr;$/;"	t
+QEQueueCtr	qequeue.h	/^    typedef uint8_t QEQueueCtr;$/;"	t
+QEQueue_getNFree	qequeue.h	201;"	d
+QEQueue_getNMin	qequeue.h	215;"	d
+QEQueue_isEmpty	qequeue.h	231;"	d
+QEvt	qep.h	/^} QEvt;$/;"	t	typeref:struct:__anon1
+QEvtSize	qf.h	/^    typedef uint16_t QEvtSize;$/;"	t
+QEvtSize	qf.h	/^    typedef uint32_t QEvtSize;$/;"	t
+QEvtSize	qf.h	/^    typedef uint8_t QEvtSize;$/;"	t
+QF_CRIT_EXIT_NOP	qf.h	854;"	d
+QF_EPOOL_EVENT_SIZE_	qk.h	192;"	d
+QF_EPOOL_EVENT_SIZE_	qv.h	98;"	d
+QF_EPOOL_EVENT_SIZE_	qxk.h	200;"	d
+QF_EPOOL_GET_	qk.h	193;"	d
+QF_EPOOL_GET_	qv.h	99;"	d
+QF_EPOOL_GET_	qxk.h	201;"	d
+QF_EPOOL_INIT_	qk.h	190;"	d
+QF_EPOOL_INIT_	qv.h	96;"	d
+QF_EPOOL_INIT_	qxk.h	198;"	d
+QF_EPOOL_PUT_	qk.h	195;"	d
+QF_EPOOL_PUT_	qv.h	101;"	d
+QF_EPOOL_PUT_	qxk.h	203;"	d
+QF_EPOOL_TYPE_	qk.h	189;"	d
+QF_EPOOL_TYPE_	qv.h	95;"	d
+QF_EPOOL_TYPE_	qxk.h	197;"	d
+QF_EQUEUE_CTR_SIZE	qequeue.h	65;"	d
+QF_EQUEUE_TYPE	qk.h	52;"	d
+QF_EQUEUE_TYPE	qv.h	49;"	d
+QF_EQUEUE_TYPE	qxk.h	52;"	d
+QF_EVENT_SIZ_SIZE	qf.h	50;"	d
+QF_H	qf.h	41;"	d
+QF_MAX_ACTIVE	qpset.h	45;"	d
+QF_MAX_EPOOL	qf.h	70;"	d
+QF_MAX_TICK_RATE	qf.h	77;"	d
+QF_MPOOL_CTR_SIZE	qmpool.h	75;"	d
+QF_MPOOL_EL	qmpool.h	167;"	d
+QF_MPOOL_SIZ_SIZE	qmpool.h	48;"	d
+QF_NO_MARGIN	qf.h	688;"	d
+QF_OS_OBJECT_TYPE	qxk.h	57;"	d
+QF_PUBLISH	qf.h	632;"	d
+QF_PUBLISH	qf.h	638;"	d
+QF_QS_ACTION	qs.h	852;"	d
+QF_QS_ACTION	qs_dummy.h	119;"	d
+QF_QS_CRIT_ENTRY	qs_dummy.h	115;"	d
+QF_QS_CRIT_EXIT	qs_dummy.h	116;"	d
+QF_QS_ISR_ENTRY	qs_dummy.h	117;"	d
+QF_QS_ISR_EXIT	qs_dummy.h	118;"	d
+QF_SCHED_LOCK_	qk.h	160;"	d
+QF_SCHED_LOCK_	qv.h	84;"	d
+QF_SCHED_LOCK_	qxk.h	169;"	d
+QF_SCHED_STAT_	qk.h	157;"	d
+QF_SCHED_STAT_	qv.h	83;"	d
+QF_SCHED_STAT_	qxk.h	166;"	d
+QF_SCHED_UNLOCK_	qk.h	169;"	d
+QF_SCHED_UNLOCK_	qv.h	85;"	d
+QF_SCHED_UNLOCK_	qxk.h	178;"	d
+QF_THREAD_TYPE	qk.h	57;"	d
+QF_THREAD_TYPE	qxk.h	60;"	d
+QF_TICK	qf.h	691;"	d
+QF_TICK_X	qf.h	676;"	d
+QF_TICK_X	qf.h	681;"	d
+QF_TIMEEVT_CTR_SIZE	qf.h	86;"	d
+QF_onIdle	qpc.h	179;"	d
+QFsm	qpc.h	/^typedef QHsm        QFsm;$/;"	t
+QFsm_ctor	qpc.h	170;"	d
+QHSM_DISPATCH	qep.h	361;"	d
+QHSM_DISPATCH	qep.h	372;"	d
+QHSM_INIT	qep.h	327;"	d
+QHSM_INIT	qep.h	337;"	d
+QHsm	qep.h	/^} QHsm;$/;"	t	typeref:struct:__anon2
+QHsmAttr	qep.h	/^union QHsmAttr {$/;"	u
+QHsmVtable	qep.h	/^struct QHsmVtable {$/;"	s
+QHsm_childState	qep.h	399;"	d
+QHsm_state	qep.h	388;"	d
+QK_H	qk.h	42;"	d
+QK_ISR_CONTEXT_	qk.h	150;"	d
+QK_PrivAttr	qk.h	/^} QK_PrivAttr;$/;"	t	typeref:struct:__anon9
+QMActive	qf.h	/^} QMActive;$/;"	t	typeref:struct:__anon7
+QMActiveVtable	qf.h	/^typedef QActiveVtable QMActiveVtable;$/;"	t
+QMPOOL_H	qmpool.h	41;"	d
+QMPool	qmpool.h	/^} QMPool;$/;"	t	typeref:struct:__anon10
+QMPoolCtr	qmpool.h	/^    typedef uint16_t QMPoolCtr;$/;"	t
+QMPoolCtr	qmpool.h	/^    typedef uint32_t QMPoolCtr;$/;"	t
+QMPoolCtr	qmpool.h	/^    typedef uint8_t QMPoolCtr;$/;"	t
+QMPoolSize	qmpool.h	/^    typedef uint16_t QMPoolSize;$/;"	t
+QMPoolSize	qmpool.h	/^    typedef uint32_t QMPoolSize;$/;"	t
+QMPoolSize	qmpool.h	/^    typedef uint8_t QMPoolSize;$/;"	t
+QMSM_DISPATCH	qpc.h	152;"	d
+QMSM_INIT	qpc.h	148;"	d
+QMState	qep.h	/^struct QMState {$/;"	s
+QMState	qep.h	/^typedef struct QMState QMState;$/;"	t	typeref:struct:QMState
+QMTranActTable	qep.h	/^struct QMTranActTable {$/;"	s
+QMTranActTable	qep.h	/^typedef struct QMTranActTable QMTranActTable;$/;"	t	typeref:struct:QMTranActTable
+QM_ENTRY	qep.h	628;"	d
+QM_ENTRY	qep.h	638;"	d
+QM_EXIT	qep.h	634;"	d
+QM_EXIT	qep.h	640;"	d
+QM_HANDLED	qep.h	687;"	d
+QM_SM_EXIT	qep.h	647;"	d
+QM_STATE_NULL	qep.h	710;"	d
+QM_SUPER	qep.h	699;"	d
+QM_SUPER_SUB	qep.h	704;"	d
+QM_TRAN	qep.h	653;"	d
+QM_TRAN_EP	qep.h	673;"	d
+QM_TRAN_HIST	qep.h	665;"	d
+QM_TRAN_INIT	qep.h	659;"	d
+QM_TRAN_XP	qep.h	679;"	d
+QM_UNHANDLED	qep.h	694;"	d
+QMsm	qep.h	/^} QMsm;$/;"	t	typeref:struct:__anon3
+QMsm_childStateObj	qep.h	501;"	d
+QMsm_stateObj	qep.h	490;"	d
+QPC_H	qpc.h	41;"	d
+QPSET_H	qpset.h	41;"	d
+QPSet	qpset.h	/^} QPSet;$/;"	t	typeref:struct:__anon11
+QPSet	qpset.h	/^} QPSet;$/;"	t	typeref:struct:__anon12
+QPSetBits	qpset.h	/^    typedef uint16_t QPSetBits;$/;"	t
+QPSetBits	qpset.h	/^    typedef uint32_t QPSetBits;$/;"	t
+QPSetBits	qpset.h	/^    typedef uint8_t QPSetBits;$/;"	t
+QPSet_findMax	qpset.h	161;"	d
+QPSet_findMax	qpset.h	96;"	d
+QPSet_hasElement	qpset.h	133;"	d
+QPSet_hasElement	qpset.h	82;"	d
+QPSet_insert	qpset.h	139;"	d
+QPSet_insert	qpset.h	86;"	d
+QPSet_isEmpty	qpset.h	120;"	d
+QPSet_isEmpty	qpset.h	76;"	d
+QPSet_notEmpty	qpset.h	127;"	d
+QPSet_notEmpty	qpset.h	79;"	d
+QPSet_remove	qpset.h	149;"	d
+QPSet_remove	qpset.h	90;"	d
+QPSet_setEmpty	qpset.h	113;"	d
+QPSet_setEmpty	qpset.h	73;"	d
+QP_API_VERSION	qpc.h	78;"	d
+QP_RELEASE	qep.h	57;"	d
+QP_VERSION	qep.h	48;"	d
+QP_VERSION_STR	qep.h	54;"	d
+QSCtr	qs.h	/^typedef uint_fast16_t QSCtr;  \/*!< QS ring buffer counter and offset type *\/$/;"	t
+QSPrivAttr	qs.h	/^} QSPrivAttr;$/;"	t	typeref:struct:__anon15
+QSTAMP_H	qstamp.h	6;"	d
+QSTimeCtr	qs.h	/^    typedef uint16_t QSTimeCtr;$/;"	t
+QSTimeCtr	qs.h	/^    typedef uint32_t QSTimeCtr;$/;"	t
+QSTimeCtr	qs.h	/^    typedef uint8_t QSTimeCtr;$/;"	t
+QS_2U8_PRE_	qs_dummy.h	101;"	d
+QS_ALL_IDS	qs.h	/^    QS_ALL_IDS = 0xF0,                      \/*!< all QS IDs *\/$/;"	e	enum:QSpyIdGroups
+QS_ALL_RECORDS	qs.h	/^    QS_ALL_RECORDS = 0xF0,\/*!< all maskable QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_AO_ID	qs.h	/^    QS_AO_ID = 0,  \/*!< offset for AO priorities *\/$/;"	e	enum:QSpyIdOffsets
+QS_AO_IDS	qs.h	/^    QS_AO_IDS  = (0x80 + (enum_t)QS_AO_ID), \/*!< AO IDs (priorities) *\/$/;"	e	enum:QSpyIdGroups
+QS_AO_RECORDS	qs.h	/^    QS_AO_RECORDS,        \/*!< Active Object QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_AP_ID	qs.h	/^    QS_AP_ID = 96, \/*!< offset for Application-specific IDs *\/$/;"	e	enum:QSpyIdOffsets
+QS_AP_IDS	qs.h	/^    QS_AP_IDS  = (0x80 + (enum_t)QS_AP_ID), \/*!< Application-specific IDs *\/$/;"	e	enum:QSpyIdGroups
+QS_ASSERTION	qs_dummy.h	81;"	d
+QS_ASSERT_FAIL	qs.h	/^    QS_ASSERT_FAIL,       \/*!< assertion failed in the code *\/$/;"	e	enum:QSpyRecords
+QS_BEGIN	qpc.h	114;"	d
+QS_BEGIN	qpc.h	132;"	d
+QS_BEGIN_ID	qs.h	577;"	d
+QS_BEGIN_ID	qs_dummy.h	57;"	d
+QS_BEGIN_NOCRIT	qs.h	542;"	d
+QS_BEGIN_NOCRIT	qs_dummy.h	59;"	d
+QS_BEGIN_NOCRIT_PRE_	qs_dummy.h	98;"	d
+QS_BEGIN_PRE_	qs_dummy.h	96;"	d
+QS_CRIT_E_	qs.h	479;"	d
+QS_CRIT_E_	qs.h	483;"	d
+QS_CRIT_E_	qs.h	513;"	d
+QS_CRIT_E_	qs.h	530;"	d
+QS_CRIT_STAT_	qs.h	478;"	d
+QS_CRIT_STAT_	qs.h	482;"	d
+QS_CRIT_STAT_	qs.h	501;"	d
+QS_CRIT_STAT_	qs.h	529;"	d
+QS_CRIT_STAT_	qs_dummy.h	114;"	d
+QS_CRIT_X_	qs.h	480;"	d
+QS_CRIT_X_	qs.h	484;"	d
+QS_CRIT_X_	qs.h	525;"	d
+QS_CRIT_X_	qs.h	531;"	d
+QS_DUMMY_H	qs_dummy.h	42;"	d
+QS_DUMP	qs_dummy.h	50;"	d
+QS_EMPTY	qs.h	/^    QS_EMPTY,             \/*!< QS record for cleanly starting a session *\/$/;"	e	enum:QSpyRecords
+QS_END	qs.h	588;"	d
+QS_END	qs_dummy.h	58;"	d
+QS_END_NOCRIT	qs.h	548;"	d
+QS_END_NOCRIT	qs_dummy.h	60;"	d
+QS_END_NOCRIT_PRE_	qs_dummy.h	99;"	d
+QS_END_PRE_	qs_dummy.h	97;"	d
+QS_EOD	qs.h	349;"	d
+QS_EP_ID	qs.h	/^    QS_EP_ID = 64, \/*!< offset for event-pool IDs *\/$/;"	e	enum:QSpyIdOffsets
+QS_EP_IDS	qs.h	/^    QS_EP_IDS  = (0x80 + (enum_t)QS_EP_ID), \/*!< event-pool IDs *\/$/;"	e	enum:QSpyIdGroups
+QS_EQC_PRE_	qs_dummy.h	109;"	d
+QS_EQ_ID	qs.h	/^    QS_EQ_ID = 80, \/*!< offset for event-queue IDs *\/$/;"	e	enum:QSpyIdOffsets
+QS_EQ_IDS	qs.h	/^    QS_EQ_IDS  = (0x80 + (enum_t)QS_EQ_ID), \/*!< event-queue IDs *\/$/;"	e	enum:QSpyIdGroups
+QS_EQ_RECORDS	qs.h	/^    QS_EQ_RECORDS,        \/*!< Event Queues QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_EVS_PRE_	qs_dummy.h	106;"	d
+QS_EXIT	qs.h	436;"	d
+QS_EXIT	qs_dummy.h	49;"	d
+QS_F32	qs.h	643;"	d
+QS_F32	qs_dummy.h	68;"	d
+QS_F32_T	qs.h	/^    QS_F32_T,             \/*!< 32-bit floating point format *\/$/;"	e	enum:__anon14
+QS_F64	qs.h	647;"	d
+QS_F64	qs_dummy.h	69;"	d
+QS_F64_T	qs.h	/^    QS_F64_T,             \/*!< 64-bit floating point format *\/$/;"	e	enum:__anon14
+QS_FILTER_AO_OBJ	qpc.h	97;"	d
+QS_FILTER_AP_OBJ	qpc.h	111;"	d
+QS_FILTER_AP_OBJ	qpc.h	131;"	d
+QS_FILTER_EQ_OBJ	qpc.h	103;"	d
+QS_FILTER_MP_OBJ	qpc.h	100;"	d
+QS_FILTER_OFF	qpc.h	91;"	d
+QS_FILTER_ON	qpc.h	88;"	d
+QS_FILTER_SM_OBJ	qpc.h	94;"	d
+QS_FILTER_TE_OBJ	qpc.h	106;"	d
+QS_FLUSH	qs.h	446;"	d
+QS_FLUSH	qs_dummy.h	82;"	d
+QS_FUN	qs.h	680;"	d
+QS_FUN	qs.h	682;"	d
+QS_FUN	qs.h	684;"	d
+QS_FUN	qs.h	686;"	d
+QS_FUN	qs.h	689;"	d
+QS_FUN	qs_dummy.h	75;"	d
+QS_FUN_DICT	qs.h	/^    QS_FUN_DICT,          \/*!< function dictionary entry *\/$/;"	e	enum:QSpyRecords
+QS_FUN_DICTIONARY	qs.h	798;"	d
+QS_FUN_DICTIONARY	qs_dummy.h	79;"	d
+QS_FUN_PRE_	qs_dummy.h	108;"	d
+QS_FUN_T	qs.h	/^    QS_FUN_T,             \/*!< function pointer format *\/$/;"	e	enum:__anon14
+QS_GET_BLOCK	qs_dummy.h	55;"	d
+QS_GET_BYTE	qs_dummy.h	54;"	d
+QS_GLB_CHECK_	qs.h	558;"	d
+QS_GLB_FILTER	qs.h	457;"	d
+QS_GLB_FILTER	qs_dummy.h	51;"	d
+QS_H	qs.h	41;"	d
+QS_HEX_FMT	qs.h	/^    QS_HEX_FMT            \/*!< HEX format for the "width" filed *\/$/;"	e	enum:__anon14
+QS_I16	qs.h	627;"	d
+QS_I16	qs_dummy.h	64;"	d
+QS_I16_T	qs.h	/^    QS_I16_T,             \/*!< signed 16-bit integer format *\/$/;"	e	enum:__anon14
+QS_I32	qs.h	635;"	d
+QS_I32	qs_dummy.h	66;"	d
+QS_I32_T	qs.h	/^    QS_I32_T,             \/*!< signed 32-bit integer format *\/$/;"	e	enum:__anon14
+QS_I64	qs.h	651;"	d
+QS_I64_T	qs.h	/^    QS_I64_T,             \/*!< signed 64-bit integer format *\/$/;"	e	enum:__anon14
+QS_I8	qs.h	619;"	d
+QS_I8	qs_dummy.h	62;"	d
+QS_I8_T	qs.h	/^    QS_I8_T,              \/*!< signed 8-bit integer format *\/$/;"	e	enum:__anon14
+QS_INIT	qs.h	427;"	d
+QS_INIT	qs_dummy.h	48;"	d
+QS_LOC_CHECK_	qs.h	563;"	d
+QS_LOC_FILTER	qs.h	468;"	d
+QS_LOC_FILTER	qs_dummy.h	52;"	d
+QS_MEM	qs.h	662;"	d
+QS_MEM	qs_dummy.h	72;"	d
+QS_MEM_T	qs.h	/^    QS_MEM_T,             \/*!< up to 255-bytes memory block format *\/$/;"	e	enum:__anon14
+QS_MPC_PRE_	qs_dummy.h	110;"	d
+QS_MPS_PRE_	qs_dummy.h	111;"	d
+QS_MP_RECORDS	qs.h	/^    QS_MP_RECORDS,        \/*!< Memory Pools QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_MUTEX_LOCK	qs.h	/^    QS_MUTEX_LOCK,        \/*!< a mutex was locked *\/$/;"	e	enum:QSpyRecords
+QS_MUTEX_UNLOCK	qs.h	/^    QS_MUTEX_UNLOCK,      \/*!< a mutex was unlocked *\/$/;"	e	enum:QSpyRecords
+QS_OBJ	qs.h	666;"	d
+QS_OBJ	qs.h	668;"	d
+QS_OBJ	qs.h	670;"	d
+QS_OBJ	qs.h	672;"	d
+QS_OBJ	qs.h	675;"	d
+QS_OBJ	qs_dummy.h	74;"	d
+QS_OBJ_DICT	qs.h	/^    QS_OBJ_DICT,          \/*!< object dictionary entry *\/$/;"	e	enum:QSpyRecords
+QS_OBJ_DICTIONARY	qs.h	782;"	d
+QS_OBJ_DICTIONARY	qs_dummy.h	78;"	d
+QS_OBJ_PRE_	qs_dummy.h	107;"	d
+QS_OBJ_T	qs.h	/^    QS_OBJ_T,             \/*!< object pointer format *\/$/;"	e	enum:__anon14
+QS_OUTPUT	qs.h	945;"	d
+QS_OUTPUT	qs_dummy.h	89;"	d
+QS_PEEK_DATA	qs.h	/^    QS_PEEK_DATA,         \/*!< reports the data from the PEEK query *\/$/;"	e	enum:QSpyRecords
+QS_QEP_DISPATCH	qs.h	/^    QS_QEP_DISPATCH,      \/*!< an event was dispatched (begin of RTC step) *\/$/;"	e	enum:QSpyRecords
+QS_QEP_IGNORED	qs.h	/^    QS_QEP_IGNORED,       \/*!< an event was ignored (silently discarded) *\/$/;"	e	enum:QSpyRecords
+QS_QEP_INIT_TRAN	qs.h	/^    QS_QEP_INIT_TRAN,     \/*!< the top-most initial transition was taken *\/$/;"	e	enum:QSpyRecords
+QS_QEP_INTERN_TRAN	qs.h	/^    QS_QEP_INTERN_TRAN,   \/*!< an internal transition was taken *\/$/;"	e	enum:QSpyRecords
+QS_QEP_STATE_ENTRY	qs.h	/^    QS_QEP_STATE_ENTRY,   \/*!< a state was entered *\/$/;"	e	enum:QSpyRecords
+QS_QEP_STATE_EXIT	qs.h	/^    QS_QEP_STATE_EXIT,    \/*!< a state was exited *\/$/;"	e	enum:QSpyRecords
+QS_QEP_STATE_INIT	qs.h	/^    QS_QEP_STATE_INIT,    \/*!< an initial transition was taken in a state *\/$/;"	e	enum:QSpyRecords
+QS_QEP_TRAN	qs.h	/^    QS_QEP_TRAN,          \/*!< a regular transition was taken *\/$/;"	e	enum:QSpyRecords
+QS_QEP_TRAN_EP	qs.h	/^    QS_QEP_TRAN_EP,       \/*!< a tran to entry point into a submachine *\/$/;"	e	enum:QSpyRecords
+QS_QEP_TRAN_HIST	qs.h	/^    QS_QEP_TRAN_HIST,     \/*!< a tran to history was taken *\/$/;"	e	enum:QSpyRecords
+QS_QEP_TRAN_XP	qs.h	/^    QS_QEP_TRAN_XP,       \/*!< a tran to exit  point out of a submachine *\/$/;"	e	enum:QSpyRecords
+QS_QEP_UNHANDLED	qs.h	/^    QS_QEP_UNHANDLED,     \/*!< an event was unhandled due to a guard *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_DEFER	qs.h	/^    QS_QF_ACTIVE_DEFER,   \/*!< AO deferred an event *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_GET	qs.h	/^    QS_QF_ACTIVE_GET,     \/*!< AO got an event and its queue is not empty *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_GET_LAST	qs.h	/^    QS_QF_ACTIVE_GET_LAST,\/*!< AO got an event and its queue is empty *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_POST	qs.h	/^    QS_QF_ACTIVE_POST,      \/*!< an event was posted (FIFO) directly to AO *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_POST_ATTEMPT	qs.h	/^    QS_QF_ACTIVE_POST_ATTEMPT,\/*!< attempt to post an evt to AO failed *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_POST_LIFO	qs.h	/^    QS_QF_ACTIVE_POST_LIFO, \/*!< an event was posted (LIFO) directly to AO *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_RECALL	qs.h	/^    QS_QF_ACTIVE_RECALL,  \/*!< AO recalled an event *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_RECALL_ATTEMPT	qs.h	/^    QS_QF_ACTIVE_RECALL_ATTEMPT, \/*!< AO attempted to recall an event *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_SUBSCRIBE	qs.h	/^    QS_QF_ACTIVE_SUBSCRIBE,   \/*!< an AO subscribed to an event *\/$/;"	e	enum:QSpyRecords
+QS_QF_ACTIVE_UNSUBSCRIBE	qs.h	/^    QS_QF_ACTIVE_UNSUBSCRIBE, \/*!< an AO unsubscribed to an event *\/$/;"	e	enum:QSpyRecords
+QS_QF_CRIT_ENTRY	qs.h	/^    QS_QF_CRIT_ENTRY,     \/*!< critical section was entered *\/$/;"	e	enum:QSpyRecords
+QS_QF_CRIT_EXIT	qs.h	/^    QS_QF_CRIT_EXIT,      \/*!< critical section was exited *\/$/;"	e	enum:QSpyRecords
+QS_QF_DELETE_REF	qs.h	/^    QS_QF_DELETE_REF,     \/*!< an event reference is about to be deleted *\/$/;"	e	enum:QSpyRecords
+QS_QF_EQUEUE_GET	qs.h	/^    QS_QF_EQUEUE_GET,     \/*!< get an event and queue still not empty *\/$/;"	e	enum:QSpyRecords
+QS_QF_EQUEUE_GET_LAST	qs.h	/^    QS_QF_EQUEUE_GET_LAST,\/*!< get the last event from the queue *\/$/;"	e	enum:QSpyRecords
+QS_QF_EQUEUE_POST	qs.h	/^    QS_QF_EQUEUE_POST,      \/*!< an event was posted (FIFO) to a raw queue *\/$/;"	e	enum:QSpyRecords
+QS_QF_EQUEUE_POST_ATTEMPT	qs.h	/^    QS_QF_EQUEUE_POST_ATTEMPT,\/*!< attempt to post an evt to QEQueue failed *\/$/;"	e	enum:QSpyRecords
+QS_QF_EQUEUE_POST_LIFO	qs.h	/^    QS_QF_EQUEUE_POST_LIFO, \/*!< an event was posted (LIFO) to a raw queue *\/$/;"	e	enum:QSpyRecords
+QS_QF_GC	qs.h	/^    QS_QF_GC,             \/*!< garbage collection *\/$/;"	e	enum:QSpyRecords
+QS_QF_GC_ATTEMPT	qs.h	/^    QS_QF_GC_ATTEMPT,     \/*!< garbage collection attempt *\/$/;"	e	enum:QSpyRecords
+QS_QF_INT_DISABLE	qs.h	/^    QS_QF_INT_DISABLE,    \/*!< interrupts were disabled *\/$/;"	e	enum:QSpyRecords
+QS_QF_INT_ENABLE	qs.h	/^    QS_QF_INT_ENABLE,     \/*!< interrupts were enabled *\/$/;"	e	enum:QSpyRecords
+QS_QF_ISR_ENTRY	qs.h	/^    QS_QF_ISR_ENTRY,      \/*!< an ISR was entered *\/$/;"	e	enum:QSpyRecords
+QS_QF_ISR_EXIT	qs.h	/^    QS_QF_ISR_EXIT,       \/*!< an ISR was exited *\/$/;"	e	enum:QSpyRecords
+QS_QF_MPOOL_GET	qs.h	/^    QS_QF_MPOOL_GET,      \/*!< a memory block was removed from memory pool *\/$/;"	e	enum:QSpyRecords
+QS_QF_MPOOL_GET_ATTEMPT	qs.h	/^    QS_QF_MPOOL_GET_ATTEMPT,  \/*!< attempt to get a memory block failed *\/$/;"	e	enum:QSpyRecords
+QS_QF_MPOOL_PUT	qs.h	/^    QS_QF_MPOOL_PUT,      \/*!< a memory block was returned to memory pool *\/$/;"	e	enum:QSpyRecords
+QS_QF_NEW	qs.h	/^    QS_QF_NEW,            \/*!< new event was created *\/$/;"	e	enum:QSpyRecords
+QS_QF_NEW_ATTEMPT	qs.h	/^    QS_QF_NEW_ATTEMPT,   \/*!< an attempt to allocate an event failed *\/$/;"	e	enum:QSpyRecords
+QS_QF_NEW_REF	qs.h	/^    QS_QF_NEW_REF,        \/*!< new event reference was created *\/$/;"	e	enum:QSpyRecords
+QS_QF_PUBLISH	qs.h	/^    QS_QF_PUBLISH,        \/*!< an event was published *\/$/;"	e	enum:QSpyRecords
+QS_QF_RECORDS	qs.h	/^    QS_QF_RECORDS,        \/*!< QF QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_QF_RUN	qs.h	/^    QS_QF_RUN,            \/*!< QF_run() was entered *\/$/;"	e	enum:QSpyRecords
+QS_QF_TICK	qs.h	/^    QS_QF_TICK,           \/*!< QF_tickX() was called *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_ARM	qs.h	/^    QS_QF_TIMEEVT_ARM,    \/*!< a time event was armed *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_AUTO_DISARM	qs.h	/^    QS_QF_TIMEEVT_AUTO_DISARM, \/*!< a time event expired and was disarmed *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_DISARM	qs.h	/^    QS_QF_TIMEEVT_DISARM, \/*!< true disarming of an armed time event *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_DISARM_ATTEMPT	qs.h	/^    QS_QF_TIMEEVT_DISARM_ATTEMPT,\/*!< attempt to disarm a disarmed QTimeEvt *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_POST	qs.h	/^    QS_QF_TIMEEVT_POST,   \/*!< a time event posted itself directly to an AO *\/$/;"	e	enum:QSpyRecords
+QS_QF_TIMEEVT_REARM	qs.h	/^    QS_QF_TIMEEVT_REARM,  \/*!< rearming of a time event *\/$/;"	e	enum:QSpyRecords
+QS_QUERY_DATA	qs.h	/^    QS_QUERY_DATA,        \/*!< reports the data from "current object" query *\/$/;"	e	enum:QSpyRecords
+QS_REC_DONE	qs.h	554;"	d
+QS_RESERVED_71	qs.h	/^    QS_RESERVED_71,$/;"	e	enum:QSpyRecords
+QS_RESERVED_72	qs.h	/^    QS_RESERVED_72,$/;"	e	enum:QSpyRecords
+QS_RESERVED_73	qs.h	/^    QS_RESERVED_73,$/;"	e	enum:QSpyRecords
+QS_RESERVED_74	qs.h	/^    QS_RESERVED_74,$/;"	e	enum:QSpyRecords
+QS_RESERVED_75	qs.h	/^    QS_RESERVED_75,$/;"	e	enum:QSpyRecords
+QS_RESERVED_76	qs.h	/^    QS_RESERVED_76,$/;"	e	enum:QSpyRecords
+QS_RESERVED_77	qs.h	/^    QS_RESERVED_77,$/;"	e	enum:QSpyRecords
+QS_RESERVED_78	qs.h	/^    QS_RESERVED_78,$/;"	e	enum:QSpyRecords
+QS_RESERVED_79	qs.h	/^    QS_RESERVED_79,$/;"	e	enum:QSpyRecords
+QS_RESERVED_80	qs.h	/^    QS_RESERVED_80,$/;"	e	enum:QSpyRecords
+QS_RESERVED_81	qs.h	/^    QS_RESERVED_81,$/;"	e	enum:QSpyRecords
+QS_RESERVED_82	qs.h	/^    QS_RESERVED_82,$/;"	e	enum:QSpyRecords
+QS_RESERVED_83	qs.h	/^    QS_RESERVED_83,$/;"	e	enum:QSpyRecords
+QS_RESERVED_84	qs.h	/^    QS_RESERVED_84,$/;"	e	enum:QSpyRecords
+QS_RESERVED_85	qs.h	/^    QS_RESERVED_85,$/;"	e	enum:QSpyRecords
+QS_RESERVED_86	qs.h	/^    QS_RESERVED_86,$/;"	e	enum:QSpyRecords
+QS_RESERVED_87	qs.h	/^    QS_RESERVED_87,$/;"	e	enum:QSpyRecords
+QS_RESERVED_88	qs.h	/^    QS_RESERVED_88,$/;"	e	enum:QSpyRecords
+QS_RESERVED_89	qs.h	/^    QS_RESERVED_89,$/;"	e	enum:QSpyRecords
+QS_RESERVED_90	qs.h	/^    QS_RESERVED_90,$/;"	e	enum:QSpyRecords
+QS_RESERVED_91	qs.h	/^    QS_RESERVED_91,$/;"	e	enum:QSpyRecords
+QS_RESERVED_92	qs.h	/^    QS_RESERVED_92,$/;"	e	enum:QSpyRecords
+QS_RESERVED_93	qs.h	/^    QS_RESERVED_93,$/;"	e	enum:QSpyRecords
+QS_RESERVED_94	qs.h	/^    QS_RESERVED_94,$/;"	e	enum:QSpyRecords
+QS_RESERVED_95	qs.h	/^    QS_RESERVED_95,$/;"	e	enum:QSpyRecords
+QS_RESERVED_96	qs.h	/^    QS_RESERVED_96,$/;"	e	enum:QSpyRecords
+QS_RESERVED_97	qs.h	/^    QS_RESERVED_97,$/;"	e	enum:QSpyRecords
+QS_RESERVED_98	qs.h	/^    QS_RESERVED_98,$/;"	e	enum:QSpyRecords
+QS_RESERVED_99	qs.h	/^    QS_RESERVED_99,$/;"	e	enum:QSpyRecords
+QS_RX_AO_FILTER	qs.h	/^    QS_RX_AO_FILTER,      \/*!< set local AO filter in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_COMMAND	qs.h	/^    QS_RX_COMMAND,        \/*!< execute a user-defined command in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_CURR_OBJ	qs.h	/^    QS_RX_CURR_OBJ,       \/*!< set the "current-object" in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_EVENT	qs.h	/^    QS_RX_EVENT           \/*!< inject an event to the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_FILL	qs.h	/^    QS_RX_FILL,           \/*!< fill Target memory *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_GLB_FILTER	qs.h	/^    QS_RX_GLB_FILTER,     \/*!< set global filters in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_INFO	qs.h	/^    QS_RX_INFO,           \/*!< query Target info (ver, config, tstamp) *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_INPUT	qs.h	950;"	d
+QS_RX_INPUT	qs_dummy.h	90;"	d
+QS_RX_LOC_FILTER	qs.h	/^    QS_RX_LOC_FILTER,     \/*!< set local  filters in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_PEEK	qs.h	/^    QS_RX_PEEK,           \/*!< peek Target memory *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_POKE	qs.h	/^    QS_RX_POKE,           \/*!< poke Target memory *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_QUERY_CURR	qs.h	/^    QS_RX_QUERY_CURR,     \/*!< query the "current object" in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_RESET	qs.h	/^    QS_RX_RESET,          \/*!< reset the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_STATUS	qs.h	/^    QS_RX_STATUS,         \/*!< reports QS data receive status *\/$/;"	e	enum:QSpyRecords
+QS_RX_TEST_CONTINUE	qs.h	/^    QS_RX_TEST_CONTINUE,  \/*!< continue a test after QS_TEST_PAUSE() *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_TEST_PROBE	qs.h	/^    QS_RX_TEST_PROBE,     \/*!< set a Test-Probe in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_TEST_SETUP	qs.h	/^    QS_RX_TEST_SETUP,     \/*!< test setup *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_TEST_TEARDOWN	qs.h	/^    QS_RX_TEST_TEARDOWN,  \/*!< test teardown *\/$/;"	e	enum:QSpyRxRecords
+QS_RX_TICK	qs.h	/^    QS_RX_TICK,           \/*!< call QF_TICK_X() in the Target *\/$/;"	e	enum:QSpyRxRecords
+QS_SCHED_IDLE	qs.h	/^    QS_SCHED_IDLE,        \/*!< scheduler became idle *\/$/;"	e	enum:QSpyRecords
+QS_SCHED_LOCK	qs.h	/^    QS_SCHED_LOCK,        \/*!< scheduler was locked *\/$/;"	e	enum:QSpyRecords
+QS_SCHED_NEXT	qs.h	/^    QS_SCHED_NEXT,        \/*!< scheduler found next task to execute *\/$/;"	e	enum:QSpyRecords
+QS_SCHED_RESUME	qs.h	/^    QS_SCHED_RESUME,      \/*!< scheduler resumed previous task (not idle) *\/$/;"	e	enum:QSpyRecords
+QS_SCHED_UNLOCK	qs.h	/^    QS_SCHED_UNLOCK,      \/*!< scheduler was unlocked *\/$/;"	e	enum:QSpyRecords
+QS_SC_RECORDS	qs.h	/^    QS_SC_RECORDS,        \/*!< Scheduler QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_SIG	qs.h	694;"	d
+QS_SIG	qs.h	700;"	d
+QS_SIG	qs.h	706;"	d
+QS_SIG	qs.h	714;"	d
+QS_SIG	qs_dummy.h	73;"	d
+QS_SIG_DICT	qs.h	/^    QS_SIG_DICT,          \/*!< signal dictionary entry *\/$/;"	e	enum:QSpyRecords
+QS_SIG_DICTIONARY	qs.h	765;"	d
+QS_SIG_DICTIONARY	qs_dummy.h	77;"	d
+QS_SIG_PRE_	qs_dummy.h	105;"	d
+QS_SIG_T	qs.h	/^    QS_SIG_T,             \/*!< event signal format *\/$/;"	e	enum:__anon14
+QS_SM_RECORDS	qs.h	/^    QS_SM_RECORDS,        \/*!< State Machine QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_STR	qs.h	659;"	d
+QS_STR	qs_dummy.h	71;"	d
+QS_STR_T	qs.h	/^    QS_STR_T,             \/*!< zero-terminated ASCII string format *\/$/;"	e	enum:__anon14
+QS_TARGET_DONE	qs.h	/^    QS_TARGET_DONE,       \/*!< reports completion of a user callback *\/$/;"	e	enum:QSpyRecords
+QS_TARGET_INFO	qs.h	/^    QS_TARGET_INFO,       \/*!< reports the Target information *\/$/;"	e	enum:QSpyRecords
+QS_TEC_PRE_	qs_dummy.h	112;"	d
+QS_TEST_PAUSE	qs.h	1026;"	d
+QS_TEST_PAUSE	qs.h	993;"	d
+QS_TEST_PAUSE	qs_dummy.h	87;"	d
+QS_TEST_PAUSED	qs.h	/^    QS_TEST_PAUSED,       \/*!< test has been paused *\/$/;"	e	enum:QSpyRecords
+QS_TEST_PROBE	qs.h	1024;"	d
+QS_TEST_PROBE	qs.h	985;"	d
+QS_TEST_PROBE	qs_dummy.h	85;"	d
+QS_TEST_PROBE_DEF	qs.h	1023;"	d
+QS_TEST_PROBE_DEF	qs.h	981;"	d
+QS_TEST_PROBE_DEF	qs_dummy.h	84;"	d
+QS_TEST_PROBE_GET	qs.h	/^    QS_TEST_PROBE_GET,    \/*!< reports that Test-Probe has been used *\/$/;"	e	enum:QSpyRecords
+QS_TEST_PROBE_ID	qs.h	1025;"	d
+QS_TEST_PROBE_ID	qs.h	989;"	d
+QS_TEST_PROBE_ID	qs_dummy.h	86;"	d
+QS_TE_RECORDS	qs.h	/^    QS_TE_RECORDS,        \/*!< Time Events QS records *\/$/;"	e	enum:QSpyRecordGroups
+QS_TIME_PRE_	qs.h	262;"	d
+QS_TIME_PRE_	qs.h	265;"	d
+QS_TIME_PRE_	qs.h	273;"	d
+QS_TIME_PRE_	qs_dummy.h	104;"	d
+QS_TIME_SIZE	qs.h	257;"	d
+QS_U0_RECORDS	qs.h	/^    QS_U0_RECORDS,        \/*!< User Group 100-104 records *\/$/;"	e	enum:QSpyRecordGroups
+QS_U16	qs.h	631;"	d
+QS_U16	qs_dummy.h	65;"	d
+QS_U16_PRE_	qs_dummy.h	102;"	d
+QS_U16_T	qs.h	/^    QS_U16_T,             \/*!< unsigned 16-bit integer format *\/$/;"	e	enum:__anon14
+QS_U1_RECORDS	qs.h	/^    QS_U1_RECORDS,        \/*!< User Group 105-109 records *\/$/;"	e	enum:QSpyRecordGroups
+QS_U2_RECORDS	qs.h	/^    QS_U2_RECORDS,        \/*!< User Group 110-114 records *\/$/;"	e	enum:QSpyRecordGroups
+QS_U32	qs.h	639;"	d
+QS_U32	qs_dummy.h	67;"	d
+QS_U32_HEX	qpc.h	126;"	d
+QS_U32_HEX	qpc.h	133;"	d
+QS_U32_PRE_	qs_dummy.h	103;"	d
+QS_U32_T	qs.h	/^    QS_U32_T,             \/*!< unsigned 32-bit integer format *\/$/;"	e	enum:__anon14
+QS_U3_RECORDS	qs.h	/^    QS_U3_RECORDS,        \/*!< User Group 115-119 records *\/$/;"	e	enum:QSpyRecordGroups
+QS_U4_RECORDS	qs.h	/^    QS_U4_RECORDS,        \/*!< User Group 120-124 records *\/$/;"	e	enum:QSpyRecordGroups
+QS_U64	qs.h	655;"	d
+QS_U64	qs_dummy.h	70;"	d
+QS_U64_T	qs.h	/^    QS_U64_T,             \/*!< unsigned 64-bit integer format *\/$/;"	e	enum:__anon14
+QS_U8	qs.h	623;"	d
+QS_U8	qs_dummy.h	63;"	d
+QS_U8_PRE_	qs_dummy.h	100;"	d
+QS_U8_T	qs.h	/^    QS_U8_T,              \/*!< unsigned 8-bit integer format *\/$/;"	e	enum:__anon14
+QS_UA_RECORDS	qs.h	/^    QS_UA_RECORDS         \/*!< All User records *\/$/;"	e	enum:QSpyRecordGroups
+QS_USER	qs.h	/^    QS_USER               \/*!< the first record available to QS users *\/$/;"	e	enum:QSpyRecords
+QS_USER0	qs.h	/^    QS_USER0 = (enum_t)QS_USER,      \/*!< offset for User Group 0 *\/$/;"	e	enum:QSpyUserOffsets
+QS_USER1	qs.h	/^    QS_USER1 = (enum_t)QS_USER0 + 5, \/*!< offset for User Group 1 *\/$/;"	e	enum:QSpyUserOffsets
+QS_USER2	qs.h	/^    QS_USER2 = (enum_t)QS_USER1 + 5, \/*!< offset for User Group 2 *\/$/;"	e	enum:QSpyUserOffsets
+QS_USER3	qs.h	/^    QS_USER3 = (enum_t)QS_USER2 + 5, \/*!< offset for User Group 3 *\/$/;"	e	enum:QSpyUserOffsets
+QS_USER4	qs.h	/^    QS_USER4 = (enum_t)QS_USER3 + 5  \/*!< offset for User Group 4 *\/$/;"	e	enum:QSpyUserOffsets
+QS_USR_DICT	qs.h	/^    QS_USR_DICT,          \/*!< user QS record dictionary entry *\/$/;"	e	enum:QSpyRecords
+QS_USR_DICTIONARY	qs.h	807;"	d
+QS_USR_DICTIONARY	qs_dummy.h	80;"	d
+QSchedStatus	qk.h	/^typedef uint_fast16_t QSchedStatus;$/;"	t
+QSchedStatus	qxk.h	/^typedef uint_fast16_t QSchedStatus;$/;"	t
+QSignal	qep.h	/^    typedef uint16_t QSignal;$/;"	t
+QSignal	qep.h	/^    typedef uint32_t QSignal;$/;"	t
+QSignal	qep.h	/^    typedef uint8_t QSignal;$/;"	t
+QSpyId	qs.h	/^typedef struct { uint8_t prio; } QSpyId;$/;"	t	typeref:struct:__anon13
+QSpyIdGroups	qs.h	/^enum QSpyIdGroups {$/;"	g
+QSpyIdOffsets	qs.h	/^enum QSpyIdOffsets {$/;"	g
+QSpyObjKind	qs.h	/^enum QSpyObjKind {$/;"	g
+QSpyRecordGroups	qs.h	/^enum QSpyRecordGroups {$/;"	g
+QSpyRecords	qs.h	/^enum QSpyRecords {$/;"	g
+QSpyRxRecords	qs.h	/^enum QSpyRxRecords {$/;"	g
+QSpyUserOffsets	qs.h	/^enum QSpyUserOffsets {$/;"	g
+QState	qep.h	/^typedef uint_fast8_t QState;$/;"	t
+QStateHandler	qep.h	/^typedef QState (*QStateHandler)(void * const me, QEvt const * const e);$/;"	t
+QSubscrList	qf.h	/^typedef QPSet QSubscrList;$/;"	t
+QTicker	qf.h	/^} QTicker;$/;"	t	typeref:struct:__anon8
+QTimeEvt	qf.h	/^typedef struct QTimeEvt {$/;"	s
+QTimeEvt	qf.h	/^} QTimeEvt;$/;"	t	typeref:struct:QTimeEvt
+QTimeEvtCtr	qf.h	/^    typedef uint16_t QTimeEvtCtr;$/;"	t
+QTimeEvtCtr	qf.h	/^    typedef uint32_t QTimeEvtCtr;$/;"	t
+QTimeEvtCtr	qf.h	/^    typedef uint8_t QTimeEvtCtr;$/;"	t
+QUIT_H	quit.h	40;"	d
+QUTEST_ON_POST	qs.h	/^        QUTEST_ON_POST = 124$/;"	e	enum:QUTestUserRecords
+QUTestUserRecords	qs.h	/^    enum QUTestUserRecords {$/;"	g
+QV_H	qv.h	42;"	d
+QXK_H	qxk.h	42;"	d
+QXK_ISR_CONTEXT_	qxk.h	159;"	d
+QXK_PrivAttr	qxk.h	/^} QXK_PrivAttr;$/;"	t	typeref:struct:__anon17
+QXK_TLS	qxk.h	63;"	d
+QXMutex	qxthread.h	/^} QXMutex;$/;"	t	typeref:struct:__anon19
+QXSemaphore	qxthread.h	/^} QXSemaphore;$/;"	t	typeref:struct:__anon18
+QXTHREAD_H	qxthread.h	41;"	d
+QXTHREAD_NO_TIMEOUT	qxthread.h	160;"	d
+QXTHREAD_POST_X	qxthread.h	147;"	d
+QXTHREAD_START	qxthread.h	103;"	d
+QXThread	qep.h	/^typedef struct QXThread QXThread;$/;"	t	typeref:struct:QXThread
+QXThread	qxthread.h	/^struct QXThread {$/;"	s
+QXThreadHandler	qep.h	/^typedef void (*QXThreadHandler)(QXThread * const me);$/;"	t
+QXThreadVtable	qxthread.h	/^typedef QActiveVtable QXThreadVtable;$/;"	t
+Q_ACTION_CAST	qep.h	237;"	d
+Q_ACTION_NULL	qep.h	589;"	d
+Q_ALLEGE	qassert.h	171;"	d
+Q_ALLEGE	qassert.h	59;"	d
+Q_ALLEGE_ID	qassert.h	186;"	d
+Q_ALLEGE_ID	qassert.h	60;"	d
+Q_ASSERT	qassert.h	136;"	d
+Q_ASSERT	qassert.h	57;"	d
+Q_ASSERT_COMPILE	qassert.h	334;"	d
+Q_ASSERT_ID	qassert.h	155;"	d
+Q_ASSERT_ID	qassert.h	58;"	d
+Q_ASSERT_STATIC	qassert.h	331;"	d
+Q_BUILD_DATE	qstamp.c	/^char const Q_BUILD_DATE[12] = __DATE__;$/;"	v
+Q_BUILD_TIME	qstamp.c	/^char const Q_BUILD_TIME[9] = __TIME__;$/;"	v
+Q_DEFINE_THIS_FILE	qassert.h	104;"	d
+Q_DEFINE_THIS_FILE	qassert.h	55;"	d
+Q_DEFINE_THIS_MODULE	qassert.h	120;"	d
+Q_DEFINE_THIS_MODULE	qassert.h	56;"	d
+Q_DELETE_REF	qf.h	831;"	d
+Q_DIM	qassert.h	337;"	d
+Q_ENSURE	qassert.h	287;"	d
+Q_ENSURE_ID	qassert.h	298;"	d
+Q_ENTRY_SIG	qep.h	/^    Q_ENTRY_SIG = 1,  \/*!< signal for coding entry actions *\/$/;"	e	enum:__anon5
+Q_ERROR	qassert.h	195;"	d
+Q_ERROR	qassert.h	61;"	d
+Q_ERROR_ID	qassert.h	211;"	d
+Q_ERROR_ID	qassert.h	62;"	d
+Q_EVT_CAST	qep.h	190;"	d
+Q_EXIT_SIG	qep.h	/^    Q_EXIT_SIG,       \/*!< signal for coding exit actions *\/$/;"	e	enum:__anon5
+Q_HANDLED	qep.h	578;"	d
+Q_HSM_UPCAST	qep.h	180;"	d
+Q_IGNORED	qpc.h	175;"	d
+Q_INIT_SIG	qep.h	/^    Q_INIT_SIG,       \/*!< signal for coding initial transitions *\/$/;"	e	enum:__anon5
+Q_INVARIANT	qassert.h	308;"	d
+Q_INVARIANT_ID	qassert.h	319;"	d
+Q_NEW	qf.h	721;"	d
+Q_NEW	qf.h	757;"	d
+Q_NEW_REF	qf.h	813;"	d
+Q_NEW_X	qf.h	725;"	d
+Q_NEW_X	qf.h	788;"	d
+Q_NORETURN	qassert.h	223;"	d
+Q_REQUIRE	qassert.h	268;"	d
+Q_REQUIRE_ID	qassert.h	279;"	d
+Q_RET_ENTRY	qep.h	/^    Q_RET_ENTRY,     \/*!< state entry action executed *\/$/;"	e	enum:__anon4
+Q_RET_EXIT	qep.h	/^    Q_RET_EXIT,      \/*!< state exit  action executed *\/$/;"	e	enum:__anon4
+Q_RET_HANDLED	qep.h	/^    Q_RET_HANDLED,   \/*!< event handled (internal transition) *\/$/;"	e	enum:__anon4
+Q_RET_IGNORED	qep.h	/^    Q_RET_IGNORED,   \/*!< event silently ignored (bubbled up to top) *\/$/;"	e	enum:__anon4
+Q_RET_NULL	qep.h	/^    Q_RET_NULL,      \/*!< return value without any effect *\/$/;"	e	enum:__anon4
+Q_RET_SUPER	qep.h	/^    Q_RET_SUPER,     \/*!< event passed to superstate to handle *\/$/;"	e	enum:__anon4
+Q_RET_SUPER_SUB	qep.h	/^    Q_RET_SUPER_SUB, \/*!< event passed to submachine superstate *\/$/;"	e	enum:__anon4
+Q_RET_TRAN	qep.h	/^    Q_RET_TRAN,      \/*!< regular transition *\/$/;"	e	enum:__anon4
+Q_RET_TRAN_EP	qep.h	/^    Q_RET_TRAN_EP,   \/*!< entry-point transition into a submachine *\/$/;"	e	enum:__anon4
+Q_RET_TRAN_HIST	qep.h	/^    Q_RET_TRAN_HIST, \/*!< transition to history of a given state *\/$/;"	e	enum:__anon4
+Q_RET_TRAN_INIT	qep.h	/^    Q_RET_TRAN_INIT, \/*!< initial transition in a state or submachine *\/$/;"	e	enum:__anon4
+Q_RET_TRAN_XP	qep.h	/^    Q_RET_TRAN_XP    \/*!< exit-point transition out of a submachine *\/$/;"	e	enum:__anon4
+Q_RET_UNHANDLED	qep.h	/^    Q_RET_UNHANDLED, \/*!< event unhandled due to a guard *\/$/;"	e	enum:__anon4
+Q_SIGNAL_SIZE	qep.h	113;"	d
+Q_STATE_CAST	qep.h	228;"	d
+Q_SUPER	qep.h	572;"	d
+Q_TRAN	qep.h	554;"	d
+Q_TRAN_HIST	qep.h	563;"	d
+Q_UINT2PTR_CAST	qep.h	199;"	d
+Q_UNHANDLED	qep.h	584;"	d
+Q_USER_SIG	qep.h	/^    Q_USER_SIG        \/*!< first signal that can be used for user signals *\/$/;"	e	enum:__anon5
+Q_XTHREAD_CAST	qpc.h	142;"	d
+SM_AO_OBJ	qs.h	/^    SM_AO_OBJ = (enum_t)MAX_OBJ \/*!< combination of SM and AO *\/$/;"	e	enum:OSpyObjCombnation
+SM_OBJ	qs.h	/^    SM_OBJ,    \/*!< state machine object *\/$/;"	e	enum:QSpyObjKind
+TE_OBJ	qs.h	/^    TE_OBJ,    \/*!< time event object *\/$/;"	e	enum:QSpyObjKind
+act	qep.h	/^    QActionHandler  act;         \/*!< pointer to an action-handler function *\/$/;"	m	union:QHsmAttr
+act	qep.h	/^    QActionHandler const act[1];$/;"	m	struct:QMTranActTable
+act	qf.h	/^    void * volatile act;$/;"	m	struct:QTimeEvt
+actPrio	qk.h	/^    uint8_t volatile actPrio;    \/*!< prio of the active AO *\/$/;"	m	struct:__anon9
+actPrio	qxk.h	/^    uint8_t volatile actPrio;       \/*!< prio of the active AO *\/$/;"	m	struct:__anon17
+bits	qpset.h	/^    QPSetBits volatile bits;  \/*!< bitmask with a bit for each element *\/$/;"	m	struct:__anon11
+bits	qpset.h	/^    uint32_t volatile bits[2];$/;"	m	struct:__anon12
+blockSize	qmpool.h	/^    QMPoolSize blockSize;$/;"	m	struct:__anon10
+buf	qs.h	/^    uint8_t *buf;         \/*!< pointer to the start of the ring buffer *\/$/;"	m	struct:__anon15
+ceiling	qxthread.h	/^    uint8_t ceiling; \/*!< prioirty ceiling of this mutex *\/$/;"	m	struct:__anon19
+char_t	qassert.h	/^    typedef char char_t;$/;"	t
+char_t	qep.h	/^typedef char char_t;$/;"	t
+chksum	qs.h	/^    uint8_t  chksum;      \/*!< the checksum of the current record *\/$/;"	m	struct:__anon15
+count	qxthread.h	/^    uint16_t volatile count; \/*!< semaphore up-down counter *\/$/;"	m	struct:__anon18
+critNest	qs.h	/^    uint8_t  critNest;    \/*!< critical section nesting level *\/$/;"	m	struct:__anon15
+ctr	qf.h	/^    QTimeEvtCtr volatile ctr;$/;"	m	struct:QTimeEvt
+curr	qxk.h	/^    struct QActive * volatile curr; \/*!< current thread pointer (NULL=basic) *\/$/;"	m	struct:__anon17
+dispatch	qep.h	/^    void (*dispatch)(QHsm * const me, QEvt const * const e,$/;"	m	struct:QHsmVtable
+dynPrio	qf.h	/^    uint8_t dynPrio;$/;"	m	struct:QActive
+eQueue	qf.h	/^    QF_EQUEUE_TYPE eQueue;$/;"	m	struct:QActive
+end	qequeue.h	/^    QEQueueCtr end;$/;"	m	struct:QEQueue
+end	qmpool.h	/^    void *end;$/;"	m	struct:__anon10
+end	qs.h	/^    QSCtr    end;         \/*!< offset of the end of the ring buffer *\/$/;"	m	struct:__anon15
+entryAction	qep.h	/^    QActionHandler const entryAction;   \/*!< entry action handler function *\/$/;"	m	struct:QMState
+enum_t	qep.h	/^typedef int enum_t;$/;"	t
+exitAction	qep.h	/^    QActionHandler const exitAction;    \/*!< exit action handler function *\/$/;"	m	struct:QMState
+float32_t	qep.h	/^typedef float float32_t;$/;"	t
+float64_t	qep.h	/^typedef double float64_t;$/;"	t
+free_head	qmpool.h	/^    void * volatile free_head;$/;"	m	struct:__anon10
+frontEvt	qequeue.h	/^    QEvt const * volatile frontEvt;$/;"	m	struct:QEQueue
+fun	qep.h	/^    QStateHandler   fun;         \/*!< pointer to a state-handler function *\/$/;"	m	union:QHsmAttr
+getStateHandler	qep.h	/^    QStateHandler (*getStateHandler)(QHsm * const me);$/;"	m	struct:QHsmVtable
+glbFilter	qs.h	/^    uint8_t glbFilter[16]; \/*!< global on\/off QS filter *\/$/;"	m	struct:__anon15
+head	qequeue.h	/^    QEQueueCtr volatile head;$/;"	m	struct:QEQueue
+head	qs.h	/^    QSCtr    head;        \/*!< offset to where next byte will be inserted *\/$/;"	m	struct:__anon15
+holderPrio	qxthread.h	/^    uint8_t volatile holderPrio; \/*!< priority of the lock holder thread *\/$/;"	m	struct:__anon19
+idleThread	qxk.h	/^    struct QActive * idleThread;    \/*!< pointer to the idle thread *\/$/;"	m	struct:__anon17	typeref:struct:__anon17::QActive
+init	qep.h	/^    void (*init)(QHsm * const me, void const * const e,$/;"	m	struct:QHsmVtable
+initAction	qep.h	/^    QActionHandler const initAction;    \/*!< init action handler function *\/$/;"	m	struct:QMState
+intNest	qk.h	/^    uint8_t volatile intNest;    \/*!< ISR nesting level *\/$/;"	m	struct:__anon9
+intNest	qxk.h	/^    uint8_t volatile intNest;       \/*!< ISR nesting level *\/$/;"	m	struct:__anon17
+int_t	qassert.h	/^    typedef int int_t;$/;"	t
+int_t	qep.h	/^typedef int int_t;$/;"	t
+interval	qf.h	/^    QTimeEvtCtr interval;$/;"	m	struct:QTimeEvt
+locFilter	qs.h	/^    uint8_t locFilter[16]; \/*!< local QS filters *\/$/;"	m	struct:__anon15
+locFilter_AP	qs.h	/^    void const *locFilter_AP; \/*!< deprecated local QS filter *\/$/;"	m	struct:__anon15
+lockHolder	qk.h	/^    uint8_t volatile lockHolder; \/*!< prio of the AO holding the lock *\/$/;"	m	struct:__anon9
+lockHolder	qxk.h	/^    uint8_t volatile lockHolder;    \/*!< prio of the lock holder *\/$/;"	m	struct:__anon17
+lockNest	qxthread.h	/^    uint8_t volatile lockNest; \/*!< lock-nesting up-down counter *\/$/;"	m	struct:__anon19
+lockPrio	qk.h	/^    uint8_t volatile lockPrio;   \/*!< lock prio (0 == no-lock) *\/$/;"	m	struct:__anon9
+lockPrio	qxk.h	/^    uint8_t volatile lockPrio;      \/*!< lock prio (0 == no-lock) *\/$/;"	m	struct:__anon17
+max_count	qxthread.h	/^    uint16_t max_count; \/*!< maximum value of the semaphore counter *\/$/;"	m	struct:__anon18
+nFree	qequeue.h	/^    QEQueueCtr volatile nFree;$/;"	m	struct:QEQueue
+nFree	qmpool.h	/^    QMPoolCtr volatile nFree;$/;"	m	struct:__anon10
+nMin	qequeue.h	/^    QEQueueCtr nMin;$/;"	m	struct:QEQueue
+nMin	qmpool.h	/^    QMPoolCtr nMin;$/;"	m	struct:__anon10
+nTot	qmpool.h	/^    QMPoolCtr nTot;$/;"	m	struct:__anon10
+next	qf.h	/^    struct QTimeEvt * volatile next;$/;"	m	struct:QTimeEvt
+next	qxk.h	/^    struct QActive * volatile next; \/*!< next thread pointer to execute *\/$/;"	m	struct:__anon17
+nextPrio	qk.h	/^    uint8_t volatile nextPrio;   \/*!< prio of the next AO to execute *\/$/;"	m	struct:__anon9
+obj	qep.h	/^    struct QMState const *obj;   \/*!< pointer to QMState object *\/$/;"	m	union:QHsmAttr
+osObject	qf.h	/^    QF_OS_OBJECT_TYPE osObject;$/;"	m	struct:QActive
+poolId_	qep.h	/^    uint8_t poolId_;          \/*!< pool ID (0 for static event) *\/$/;"	m	struct:__anon1
+post	qf.h	/^    bool (*post)(QActive * const me, QEvt const * const e,$/;"	m	struct:__anon6
+postLIFO	qf.h	/^    void (*postLIFO)(QActive * const me, QEvt const * const e);$/;"	m	struct:__anon6
+prio	qf.h	/^    uint8_t prio;$/;"	m	struct:QActive
+prio	qs.h	/^typedef struct { uint8_t prio; } QSpyId;$/;"	m	struct:__anon13
+readySet	qk.h	/^    QPSet readySet;              \/*!< QK ready-set of AOs *\/$/;"	m	struct:__anon9
+readySet	qxk.h	/^    QPSet readySet;                 \/*!< ready-set of all threads *\/$/;"	m	struct:__anon17
+refCtr_	qep.h	/^    uint8_t volatile refCtr_; \/*!< reference counter *\/$/;"	m	struct:__anon1
+ring	qequeue.h	/^    QEvt const **ring;$/;"	m	struct:QEQueue
+seq	qs.h	/^    uint8_t  seq;         \/*!< the record sequence number *\/$/;"	m	struct:__anon15
+sig	qep.h	/^    QSignal sig;              \/*!< signal of the event instance *\/$/;"	m	struct:__anon1
+start	qf.h	/^    void (*start)(QActive * const me, uint_fast8_t prio,$/;"	m	struct:__anon6
+start	qmpool.h	/^    void *start;$/;"	m	struct:__anon10
+state	qep.h	/^    union QHsmAttr state; \/*!< current active state (state-variable) *\/$/;"	m	struct:__anon2	typeref:union:__anon2::QHsmAttr
+stateHandler	qep.h	/^    QStateHandler  const stateHandler;  \/*!< state handler function *\/$/;"	m	struct:QMState
+super	qep.h	/^    QHsm super; \/*!< inherits ::QHsm *\/$/;"	m	struct:__anon3
+super	qf.h	/^    QActive super; \/*!< inherits ::QActive *\/$/;"	m	struct:__anon7
+super	qf.h	/^    QActive super; \/*!< inherits ::QActive *\/$/;"	m	struct:__anon8
+super	qf.h	/^    QEvt super; \/*<! inherits ::QEvt *\/$/;"	m	struct:QTimeEvt
+super	qf.h	/^    QHsm super; \/*!< inherits ::QHsm *\/$/;"	m	struct:QActive
+super	qf.h	/^    struct QHsmVtable super; \/*!< inherits ::QHsmVtable *\/$/;"	m	struct:__anon6	typeref:struct:__anon6::QHsmVtable
+super	qs.h	/^        QActive super; \/*< inherit QActive *\/$/;"	m	struct:__anon16
+super	qxthread.h	/^    QActive super;    \/*!< inherited ::QActive *\/$/;"	m	struct:QXThread
+superstate	qep.h	/^    struct QMState const *superstate;   \/*!< superstate of this state *\/$/;"	m	struct:QMState
+tail	qequeue.h	/^    QEQueueCtr volatile tail;$/;"	m	struct:QEQueue
+tail	qs.h	/^    QSCtr    tail;        \/*!< offset of where next byte will be extracted *\/$/;"	m	struct:__anon15
+target	qep.h	/^    struct QMState const *target;$/;"	m	struct:QMTranActTable
+tatbl	qep.h	/^    QMTranActTable const *tatbl; \/*!< transition-action table *\/$/;"	m	union:QHsmAttr
+temp	qep.h	/^    union QHsmAttr temp;  \/*!< temporary: tran. chain, target state, etc. *\/$/;"	m	struct:__anon2	typeref:union:__anon2::QHsmAttr
+thr	qep.h	/^    QXThreadHandler thr;         \/*!< pointer to an thread-handler function *\/$/;"	m	union:QHsmAttr
+thread	qf.h	/^    QF_THREAD_TYPE thread;$/;"	m	struct:QActive
+timeEvt	qxthread.h	/^    QTimeEvt timeEvt; \/*!< time event to handle blocking timeouts *\/$/;"	m	struct:QXThread
+uint_t	qep.h	/^typedef unsigned uint_t;$/;"	t
+used	qs.h	/^    QSCtr    used;        \/*!< number of bytes currently in the ring buffer *\/$/;"	m	struct:__anon15
+vptr	qep.h	/^    struct QHsmVtable const *vptr; \/*!< virtual pointer *\/$/;"	m	struct:__anon2
+waitSet	qxthread.h	/^    QPSet waitSet; \/*!< set of extended-threads waiting on this mutex *\/$/;"	m	struct:__anon19
+waitSet	qxthread.h	/^    QPSet waitSet; \/*!< set of extended-threads waiting on this semaphore *\/$/;"	m	struct:__anon18
