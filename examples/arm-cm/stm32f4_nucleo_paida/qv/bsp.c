@@ -34,32 +34,21 @@
 #include "qpc.h"
 #include "blinky.h"
 #include "bsp.h"
-
+#include "stm32f4xx_hal.h"
 #include "stm32f4xx.h"  /* CMSIS-compliant header file for the MCU used */
-#include "stm32f4xx_hal_exti.h"
-#include "stm32f4xx_hal_gpio.h"
-#include "stm32f4xx_hal_rcc.h"
-#include "stm32f4xx_hal_usart.h"
 /* add other drivers if necessary... */
 
 Q_DEFINE_THIS_FILE
 
 /* ISRs defined in this BSP ------------------------------------------------*/
 void SysTick_Handler(void);
-void USART2_IRQHandler(void);
+void USART1_IRQHandler(void);
+UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 
 /* Local-scope defines -----------------------------------------------------*/
 #define LED_GPIO_PORT     GPIOA
-//#define LED_GPIO_CLK      RCC_AHB1Periph_GPIOB
-
-//#define LED4_PIN          GPIO_Pin_12
 #define LED3_PIN          GPIO_PIN_5
-//#define LED5_PIN          GPIO_Pin_14
-//#define LED6_PIN          GPIO_Pin_15
-
-//#define BTN_GPIO_PORT     GPIOB
-//#define BTN_GPIO_CLK      RCC_AHB1Periph_GPIOA
-//#define BTN_B1            GPIO_Pin_0
 
 static uint32_t l_rnd;    /* random seed */
 
@@ -76,6 +65,182 @@ static uint32_t l_rnd;    /* random seed */
     };
 
 #endif
+void HAL_UART_MspInit(UART_HandleTypeDef* huart)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(huart->Instance==USART1)
+  {
+  /* USER CODE BEGIN USART1_MspInit 0 */
+
+  /* USER CODE END USART1_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_USART1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**USART1 GPIO Configuration
+    PA9     ------> USART1_TX
+    PA10     ------> USART1_RX
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* USART1 interrupt Init */
+    HAL_NVIC_SetPriority(USART1_IRQn, 0, 0); 
+    HAL_NVIC_EnableIRQ(USART1_IRQn);
+  /* USER CODE BEGIN USART1_MspInit 1 */
+
+  /* USER CODE END USART1_MspInit 1 */
+  }
+     else if(huart->Instance==USART2)
+   {
+   /* USER CODE BEGIN USART2_MspInit 0 */
+
+   /* USER CODE END USART2_MspInit 0 */
+     /* Peripheral clock enable */
+     __HAL_RCC_USART2_CLK_ENABLE();
+
+     __HAL_RCC_GPIOA_CLK_ENABLE();
+     /**USART2 GPIO Configuration
+     PA2     ------> USART2_TX
+     PA3     ------> USART2_RX
+     */
+     GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+     GPIO_InitStruct.Pull = GPIO_NOPULL;
+     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+     GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
+     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+   /* USER CODE BEGIN USART2_MspInit 1 */
+     HAL_NVIC_SetPriority(USART2_IRQn, 0, 0);
+     HAL_NVIC_EnableIRQ(USART2_IRQn);
+
+   /* USER CODE END USART2_MspInit 1 */
+   }
+
+
+}
+ static void MX_USART2_UART_Init(void)
+ {
+ 
+   /* USER CODE BEGIN USART2_Init 0 */
+ 
+   /* USER CODE END USART2_Init 0 */
+ 
+   /* USER CODE BEGIN USART2_Init 1 */
+ 
+   /* USER CODE END USART2_Init 1 */
+   huart2.Instance = USART2;
+   huart2.Init.BaudRate = 115200;
+   huart2.Init.WordLength = UART_WORDLENGTH_8B;
+   huart2.Init.StopBits = UART_STOPBITS_1;
+   huart2.Init.Parity = UART_PARITY_NONE;
+   huart2.Init.Mode = UART_MODE_TX_RX;
+   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+   if (HAL_UART_Init(&huart2) != HAL_OK)
+   {
+     Error_Handler();
+   }
+   /* USER CODE BEGIN USART2_Init 2 */
+ 
+   /* USER CODE END USART2_Init 2 */
+ 
+ }
+
+ void HAL_MspInit(void)
+ {
+   /* USER CODE BEGIN MspInit 0 */
+ 
+   /* USER CODE END MspInit 0 */
+ 
+   __HAL_RCC_SYSCFG_CLK_ENABLE();
+   __HAL_RCC_PWR_CLK_ENABLE();
+ 
+   /* System interrupt init*/
+ 
+   /* USER CODE BEGIN MspInit 1 */
+ 
+   /* USER CODE END MspInit 1 */
+ }
+
+
+ static void MX_USART1_UART_Init(void)
+ {
+ 
+   /* USER CODE BEGIN USART1_Init 0 */
+ 
+   /* USER CODE END USART1_Init 0 */
+ 
+   /* USER CODE BEGIN USART1_Init 1 */
+ 
+   /* USER CODE END USART1_Init 1 */
+   huart1.Instance = USART1;
+   huart1.Init.BaudRate = 115200;
+   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+   huart1.Init.StopBits = UART_STOPBITS_1;
+   huart1.Init.Parity = UART_PARITY_NONE;
+   huart1.Init.Mode = UART_MODE_TX_RX;
+   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+   if (HAL_UART_Init(&huart1) != HAL_OK)
+   {
+     Error_Handler();
+   }
+   /* USER CODE BEGIN USART1_Init 2 */
+ 
+   /* USER CODE END USART1_Init 2 */
+ 
+ }
+
+
+void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+ {
+   if(huart->Instance==USART1)
+   {
+   /* USER CODE BEGIN USART1_MspDeInit 0 */
+
+   /* USER CODE END USART1_MspDeInit 0 */
+     /* Peripheral clock disable */
+     __HAL_RCC_USART1_CLK_DISABLE();
+
+     /**USART1 GPIO Configuration
+     PA9     ------> USART1_TX
+     PA10     ------> USART1_RX
+     */
+     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
+
+     /* USART1 interrupt DeInit */
+     HAL_NVIC_DisableIRQ(USART1_IRQn);
+   /* USER CODE BEGIN USART1_MspDeInit 1 */
+
+   /* USER CODE END USART1_MspDeInit 1 */
+   }
+  else if(huart->Instance==USART2)
+   {
+   /* USER CODE BEGIN USART2_MspDeInit 0 */
+ 
+   /* USER CODE END USART2_MspDeInit 0 */
+     /* Peripheral clock disable */
+     __HAL_RCC_USART2_CLK_DISABLE();
+ 
+     /**USART2 GPIO Configuration
+     PA2     ------> USART2_TX
+     PA3     ------> USART2_RX
+     */
+     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2|GPIO_PIN_3);
+     HAL_NVIC_DisableIRQ(USART2_IRQn);
+   /* USER CODE BEGIN USART2_MspDeInit 1 */
+ 
+   /* USER CODE END USART2_MspDeInit 1 */
+   }
+
+ }
+
 
 /* ISRs used in this project ===============================================*/
 void SysTick_Handler(void) {
@@ -85,7 +250,7 @@ void SysTick_Handler(void) {
     //    uint32_t previous;
     //} buttons = { 0U, 0U };
     //uint32_t current;
-    //uint32_t tmp;
+    uint32_t tmp;
 
 #ifdef Q_SPY
     {
@@ -152,6 +317,8 @@ void Error_Handler(void)
  }
 
 
+ 
+
 void SystemClock_Config(void)
  {
    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -164,13 +331,12 @@ void SystemClock_Config(void)
    /** Initializes the RCC Oscillators according to the specified parameters
    * in the RCC_OscInitTypeDef structure.
    */
-   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
-   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
+   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
    RCC_OscInitStruct.LSIState = RCC_LSI_ON;
    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-   RCC_OscInitStruct.PLL.PLLM = 8;
+   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+   RCC_OscInitStruct.PLL.PLLM = 4;
    RCC_OscInitStruct.PLL.PLLN = 100;
    RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
    RCC_OscInitStruct.PLL.PLLQ = 4;
@@ -194,7 +360,6 @@ void SystemClock_Config(void)
  }
  
 
-
 /* BSP functions ===========================================================*/
 void BSP_init(void) {
     GPIO_InitTypeDef GPIO_struct;
@@ -205,7 +370,13 @@ void BSP_init(void) {
     HAL_Init();
     SystemClock_Config();
     SystemCoreClockUpdate();
-
+    //HAL_UART_MspInit(USART1);
+    MX_USART2_UART_Init();
+    uint32_t tempsysclock,temphclk,temppclk1,temppclk2;
+    tempsysclock = HAL_RCC_GetSysClockFreq();
+    temphclk = HAL_RCC_GetHCLKFreq();
+    temppclk1 = HAL_RCC_GetPCLK1Freq();
+    temppclk2 = HAL_RCC_GetPCLK2Freq();
     /* configure the FPU usage by choosing one of the options... */
 #if 1
     /* OPTION 1:
@@ -232,8 +403,6 @@ void BSP_init(void) {
 #endif
 
     /* Initialize thr port for the LEDs */
-    //RCC_AHB1PeriphClockCmd(LED_GPIO_CLK , ENABLE);
-    //__HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
     /* GPIO Configuration for the LEDs... */
     GPIO_struct.Mode  = GPIO_MODE_OUTPUT_PP;
@@ -243,34 +412,10 @@ void BSP_init(void) {
     GPIO_struct.Pin = LED3_PIN;
     HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_struct);
     HAL_GPIO_WritePin(LED_GPIO_PORT,LED3_PIN,GPIO_PIN_SET);
-//    LED_GPIO_PORT->BSRRH = LED3_PIN; /* turn LED off */
-//
-//    GPIO_struct.GPIO_Pin = LED4_PIN;
-//    GPIO_Init(LED_GPIO_PORT, &GPIO_struct);
-//    LED_GPIO_PORT->BSRRH = LED4_PIN; /* turn LED off */
-//
-//    GPIO_struct.GPIO_Pin = LED5_PIN;
-//    GPIO_Init(LED_GPIO_PORT, &GPIO_struct);
-//    LED_GPIO_PORT->BSRRH = LED5_PIN; /* turn LED off */
-//
-//    GPIO_struct.GPIO_Pin = LED6_PIN;
-//    GPIO_Init(LED_GPIO_PORT, &GPIO_struct);
-//    LED_GPIO_PORT->BSRRH = LED6_PIN; /* turn LED off */
-//
-    /* Initialize thr port for Button */
-    //RCC_AHB1PeriphClockCmd(BTN_GPIO_CLK , ENABLE);
-
-    ///* GPIO Configuration for the Button... */
-    //GPIO_struct.GPIO_Pin   = BTN_B1;
-    //GPIO_struct.GPIO_Mode  = GPIO_Mode_IN;
-    //GPIO_struct.GPIO_OType = GPIO_OType_PP;
-    //GPIO_struct.GPIO_PuPd  = GPIO_PuPd_DOWN;
-    //GPIO_struct.GPIO_Speed = GPIO_Speed_50MHz;
-    //GPIO_Init(BTN_GPIO_PORT, &GPIO_struct);
 
     /* seed the random number generator */
     BSP_randomSeed(1234U);
-
+    //printf("hello world\r\n");
     if (QS_INIT((void *)0) == 0U) { /* initialize the QS software tracing */
         Q_ERROR();
     }
@@ -285,45 +430,12 @@ void BSP_init(void) {
 }
 /*..........................................................................*/
 void BSP_ledon(void) {
-   // LED_GPIO_PORT->BSRRL = LED6_PIN;
     HAL_GPIO_WritePin(LED_GPIO_PORT,LED3_PIN,GPIO_PIN_SET);
 }
 /*..........................................................................*/
 void BSP_ledoff(void) {
- //   LED_GPIO_PORT->BSRRH = LED6_PIN;
     HAL_GPIO_WritePin(LED_GPIO_PORT,LED3_PIN,GPIO_PIN_RESET);
 }
-/*..........................................................................*/
-//void BSP_displayPhilStat(uint8_t n, char const *stat) {
-//    (void)n;
-//
-//    if (stat[0] == 'h') {
-//        LED_GPIO_PORT->BSRRL = LED3_PIN; /* turn LED on  */
-//    }
-//    else {
-//        LED_GPIO_PORT->BSRRH = LED3_PIN; /* turn LED off */
-//    }
-//    if (stat[0] == 'e') {
-//        LED_GPIO_PORT->BSRRL = LED5_PIN; /* turn LED on  */
-//    }
-//    else {
-//        LED_GPIO_PORT->BSRRH = LED5_PIN; /* turn LED off */
-//    }
-//
-//    QS_BEGIN_ID(PHILO_STAT, AO_Philo[n]->prio) /* app-specific record */
-//        QS_U8(1, n);  /* Philosopher number */
-//        QS_STR(stat); /* Philosopher status */
-//    QS_END()          /* application-specific record end */
-//}
-/*..........................................................................*/
-//void BSP_displayPaused(uint8_t paused) {
-//    if (paused) {
-//        LED_GPIO_PORT->BSRRL = LED4_PIN; /* turn LED on  */
-//    }
-//    else {
-//        LED_GPIO_PORT->BSRRH = LED4_PIN; /* turn LED off */
-//    }
-//}
 /*..........................................................................*/
 uint32_t BSP_random(void) { /* a very cheap pseudo-random-number generator */
     uint32_t rnd;
@@ -392,17 +504,17 @@ void QV_onIdle(void) { /* CATION: called with interrupts DISABLED, NOTE01 */
     QF_INT_ENABLE();
     QS_rxParse();  /* parse all the received bytes */
 
-    //if ((USART2->SR & USART_FLAG_TXE) != 0) { /* TXE empty? */
-    //    uint16_t b;
+    if ((USART2->SR & USART_FLAG_TXE) != 0) { /* TXE empty? */
+        uint16_t b;
 
-    //    QF_INT_DISABLE();
-    //    b = QS_getByte();
-    //    QF_INT_ENABLE();
+        QF_INT_DISABLE();
+        b = QS_getByte();
+        QF_INT_ENABLE();
 
-    //    if (b != QS_EOD) {  /* not End-Of-Data? */
-    //        USART2->DR  = (b & 0xFFU);  /* put into the DR register */
-    //    }
-    //}
+        if (b != QS_EOD) {  /* not End-Of-Data? */
+            USART2->DR  = (b & 0xFFU);  /* put into the DR register */
+        }
+    }
 #elif defined NDEBUG
     /* Put the CPU and peripherals to the low-power mode.
     * you might need to customize the clock management for your application,
@@ -450,33 +562,6 @@ uint8_t QS_onStartup(void const *arg) {
     QS_rxInitBuf(qsRxBuf, sizeof(qsRxBuf));
 
     /* enable peripheral clock for USART2 */
-    //RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
-
-    /* GPIOA clock enable */
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
-
-    /* GPIOA Configuration:  USART2 TX on PA2 and RX on PA3 */
-    //GPIO_struct.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3;
-    //GPIO_struct.GPIO_Mode = GPIO_Mode_AF;
-    //GPIO_struct.GPIO_Speed = GPIO_Speed_50MHz;
-    //GPIO_struct.GPIO_OType = GPIO_OType_PP;
-    //GPIO_struct.GPIO_PuPd = GPIO_PuPd_UP ;
-    //GPIO_Init(GPIOA, &GPIO_struct);
-
-    ///* Connect USART2 pins to AF2 */
-    //GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); /* TX = PA2 */
-    //GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2); /* RX = PA3 */
-
-    //USART_struct.USART_BaudRate = 115200;
-    //USART_struct.USART_WordLength = USART_WordLength_8b;
-    //USART_struct.USART_StopBits = USART_StopBits_1;
-    //USART_struct.USART_Parity = USART_Parity_No;
-    //USART_struct.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-    //USART_struct.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-    //USART_Init(USART2, &USART_struct);
-
-    //USART_ITConfig(USART2, USART_IT_RXNE, ENABLE); /* enable RX interrupt */
-    //USART_Cmd(USART2, ENABLE); /* enable USART2 */
 
     QS_tickPeriod_ = SystemCoreClock / BSP_TICKS_PER_SEC;
     QS_tickTime_ = QS_tickPeriod_; /* to start the timestamp at zero */
@@ -502,9 +587,9 @@ void QS_onFlush(void) {
     QF_INT_DISABLE();
     while ((b = QS_getByte()) != QS_EOD) { /* while not End-Of-Data... */
         QF_INT_ENABLE();
-       // while ((USART2->SR & USART_FLAG_TXE) == 0) { /* while TXE not empty */
-       // }
-       // USART2->DR = (b & 0xFFU); /* put into the DR register */
+        while ((USART2->SR & USART_FLAG_TXE) == 0) { /* while TXE not empty */
+        }
+        USART2->DR = (b & 0xFFU); /* put into the DR register */
         QF_INT_DISABLE();
     }
     QF_INT_ENABLE();
@@ -535,9 +620,26 @@ void QS_onCommand(uint8_t cmdId,
         Q_ERROR();
     }
     else if (cmdId == 11U) {
-        assert_failed("QS_onCommand", 123);
+        //assert_failed("QS_onCommand", 123);
     }
 }
+
+
+#ifdef __GNUC__
+  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif /* __GNUC__ */
+
+
+PUTCHAR_PROTOTYPE  
+{  
+    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);  //调用STM32的HAL库，发送一个字节
+    return (ch);  
+}  
+
+
+
 
 #endif /* Q_SPY */
 /*--------------------------------------------------------------------------*/

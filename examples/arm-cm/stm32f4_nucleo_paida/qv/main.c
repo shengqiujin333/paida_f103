@@ -34,7 +34,7 @@
 #include "qpc.h"
 #include "blinky.h"
 #include "bsp.h"
-
+#include "stm32f4xx_hal.h"
 Q_DEFINE_THIS_FILE
 
 //static QTicker l_ticker0;

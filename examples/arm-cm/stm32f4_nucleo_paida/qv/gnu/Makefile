@@ -103,9 +103,10 @@ C_SRCS := \
 	$(QPC)/3rd_party/stm32f4-nucleo/system_stm32f4xx.c \
 	$(QPC)/3rd_party/stm32f4-nucleo/Src/stm32f4xx_hal_gpio.c \
 	$(QPC)/3rd_party/stm32f4-nucleo/Src/stm32f4xx_hal_rcc.c \
-	$(QPC)/3rd_party/stm32f4-nucleo/Src/stm32f4xx_hal_usart.c \
+	$(QPC)/3rd_party/stm32f4-nucleo/Src/stm32f4xx_hal_uart.c \
 	stm32f4xx_hal.c \
-	stm32f4xx_hal_cortex.c
+	stm32f4xx_hal_cortex.c \
+	main.c
 #sometest:
 #	@echo $(C_SRCS)
 # C++ source files
@@ -201,7 +202,7 @@ ASFLAGS = $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O1 $(INCLUDES) $(DEFINES) -DNDEBUG -D STM32F411xE
+	-O1 $(INCLUDES) $(DEFINES) -DNDEBUG -D STM32F411xE -D HSE_VALUE=8000000U
 
 CPPFLAGS = -c $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
@@ -217,11 +218,11 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES) -DQ_SPY -D STM32F411xE
+	-O $(INCLUDES) $(DEFINES) -D Q_SPY -D STM32F411xE -D HSE_VALUE=8000000U
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
-	-O $(INCLUDES) $(DEFINES) -DQ_SPY
+	-O $(INCLUDES) $(DEFINES) -D Q_SPY
 
 else # default Debug configuration ..........................................
 
@@ -231,7 +232,7 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES) -D STM32F411xE
+	-O $(INCLUDES) $(DEFINES) -D STM32F411xE -D HSE_VALUE=8000000U
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
@@ -320,3 +321,5 @@ show:
 	@echo C_DEPS_EXT = $(C_DEPS_EXT)
 	@echo CPP_DEPS_EXT = $(CPP_DEPS_EXT)
 	@echo TARGET_ELF = $(TARGET_ELF)
+	@echo QS_SRCS = $(QS_SRCS)
+	@echo TARGET_BIN = $(TARGET_BIN)

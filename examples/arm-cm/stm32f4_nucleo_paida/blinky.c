@@ -70,8 +70,8 @@ void blinky_ctor(void) {
 static QState Blinky_initial(Blinky * const me, void const * const par) {
     /*.${AOs::Blinky::SM::initial} */
     QTimeEvt_armX(&me->timeEvt,
-        BSP_TICKS_PER_SEC/2,
-        BSP_TICKS_PER_SEC/2);
+        BSP_TICKS_PER_SEC/3,
+        BSP_TICKS_PER_SEC);
     return Q_TRAN(&Blinky_off);
 }
 /*.${AOs::Blinky::SM::off} .................................................*/
