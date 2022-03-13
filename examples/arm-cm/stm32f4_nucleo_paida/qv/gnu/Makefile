@@ -106,7 +106,8 @@ C_SRCS := \
 	$(QPC)/3rd_party/stm32f4-nucleo/Src/stm32f4xx_hal_uart.c \
 	stm32f4xx_hal.c \
 	stm32f4xx_hal_cortex.c \
-	main.c
+	main.c \
+	syscalls.c
 #sometest:
 #	@echo $(C_SRCS)
 # C++ source files
@@ -176,7 +177,15 @@ AS    := arm-none-eabi-as
 LINK  := arm-none-eabi-gcc
 BIN   := arm-none-eabi-objcopy
 
-
+C_DEFS = \
+-D USE_HAL_DRIVER \
+-D STM32F411xE \
+-D ARM_MATH_CM4 \
+-D __VFP_FP__ \
+-D ARM_MATH_MATRIX_CHECK \
+-D ARM_MATH_ROUNDING \
+-D HSE_VALUES=8000000U \
+-D __MICROLIB
 ##############################################################################
 # Typically, you should not need to change anything below this line
 
@@ -198,11 +207,11 @@ ifeq (rel, $(CONF)) # Release configuration ..................................
 
 BIN_DIR := rel
 
-ASFLAGS = $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
+ASFLAGS = $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU) __pd "__MICROLIB SETA 1"
 
 CFLAGS = -c $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O1 $(INCLUDES) $(DEFINES) -DNDEBUG -D STM32F411xE -D HSE_VALUE=8000000U
+	-O1 $(INCLUDES) $(DEFINES) -DNDEBUG $(C_DEFS) 
 
 CPPFLAGS = -c $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
@@ -218,7 +227,7 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES) -D Q_SPY -D STM32F411xE -D HSE_VALUE=8000000U
+	-O $(INCLUDES) $(DEFINES) -D Q_SPY $(C_DEFS) 
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
@@ -232,7 +241,7 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES) -D STM32F411xE -D HSE_VALUE=8000000U
+	-O $(INCLUDES) $(DEFINES) $(C_DEFS)
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \
@@ -323,3 +332,4 @@ show:
 	@echo TARGET_ELF = $(TARGET_ELF)
 	@echo QS_SRCS = $(QS_SRCS)
 	@echo TARGET_BIN = $(TARGET_BIN)
+	@echo C_DEFS = $(C_DEFS)

@@ -36,6 +36,7 @@
 #include "bsp.h"
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx.h"  /* CMSIS-compliant header file for the MCU used */
+#include <stdio.h>
 /* add other drivers if necessary... */
 
 Q_DEFINE_THIS_FILE
@@ -51,18 +52,23 @@ UART_HandleTypeDef huart2;
 #define LED3_PIN          GPIO_PIN_5
 
 static uint32_t l_rnd;    /* random seed */
+int __io_putchar(int ch)
+ {
+   HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xffff);
+   return ch;
+ }
 
 #ifdef Q_SPY
-    static QSTimeCtr QS_tickTime_;
-    static QSTimeCtr QS_tickPeriod_;
+static QSTimeCtr QS_tickTime_;
+static QSTimeCtr QS_tickPeriod_;
 
-    /* QSpy source IDs */
-    static QSpyId const l_SysTick = { 0U };
+/* QSpy source IDs */
+static QSpyId const l_SysTick = { 0U };
 
-    enum AppRecords { /* application-specific trace records */
-        PHILO_STAT = QS_USER,
-        COMMAND_STAT
-    };
+enum AppRecords { /* application-specific trace records */
+    BLINKY_STAT = QS_USER,
+    COMMAND_STAT
+};
 
 #endif
 void HAL_UART_MspInit(UART_HandleTypeDef* huart)
@@ -420,8 +426,8 @@ void BSP_init(void) {
         Q_ERROR();
     }
     QS_OBJ_DICTIONARY(&l_SysTick);
-    QS_USR_DICTIONARY(PHILO_STAT);
-    QS_USR_DICTIONARY(COMMAND_STAT);
+    QS_USR_DICTIONARY(BLINKY_STAT);
+    //QS_USR_DICTIONARY(COMMAND_STAT);
 
     /* setup the QS filters... */
     QS_GLB_FILTER(QS_SM_RECORDS); /* state machine records */
@@ -429,12 +435,23 @@ void BSP_init(void) {
     QS_GLB_FILTER(QS_UA_RECORDS); /* all user records */
 }
 /*..........................................................................*/
+extern QActive *const AO_Blinky;
 void BSP_ledon(void) {
     HAL_GPIO_WritePin(LED_GPIO_PORT,LED3_PIN,GPIO_PIN_SET);
+    //QS_BEGIN_ID(BLINKY_STAT,AO_Blinky->prio) /* app-specific record */
+    //QS_U8(1, n);  /* Philosopher number */
+    //QS_STR(stat); /* Philosopher status */
+    //QS_END()          /* application-specific record end */
+
 }
 /*..........................................................................*/
 void BSP_ledoff(void) {
     HAL_GPIO_WritePin(LED_GPIO_PORT,LED3_PIN,GPIO_PIN_RESET);
+        //   QS_BEGIN_ID(BLINKY_STAT, AO_Blinky->prio) /* app-specific record */
+       //QS_U8(1, n);  /* Philosopher number */
+       //QS_STR(stat); /* Philosopher status */
+       //QS_END()          /* application-specific record end */
+
 }
 /*..........................................................................*/
 uint32_t BSP_random(void) { /* a very cheap pseudo-random-number generator */
@@ -625,18 +642,18 @@ void QS_onCommand(uint8_t cmdId,
 }
 
 
-#ifdef __GNUC__
-  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
-#else
-  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif /* __GNUC__ */
-
-
-PUTCHAR_PROTOTYPE  
-{  
-    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);  //调用STM32的HAL库，发送一个字节
-    return (ch);  
-}  
+//#ifdef __GNUC__
+//  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+//#else
+//  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+//#endif /* __GNUC__ */
+//
+//
+//PUTCHAR_PROTOTYPE  
+//{  
+//    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);  //调用STM32的HAL库，发送一个字节
+//    return (ch);  
+//}  
 
 
 

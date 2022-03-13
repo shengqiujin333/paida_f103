@@ -89,7 +89,16 @@ int main() {
    //               (void *)0,                 /* stack storage (not used) */
    //               0U,                        /* size of the stack [bytes] */
    //               (QEvt *)0);                /* initialization event */
-    
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
+   printf("hello world\r\n"); 
     QACTIVE_START(AO_Blinky,
                   1U,
                   l_blinkyQSto,
